@@ -198,8 +198,8 @@ module buoyancy_mod
            tmpc(nx/2+1,ny,nz), tmprhs(nx/2+1,ny,nz) )
 
       ! Plans for FFTW
-      planf = fftw_plan_dft_r2c_2d(ny,nx,in,out,FFTW_ESTIMATE)
-      planb = fftw_plan_dft_c2r_2d(ny,nx,out,in,FFTW_ESTIMATE)
+      planf = fftw_plan_dft_r2c_2d(ny,nx,in,out,FFTW_MEASURE)
+      planb = fftw_plan_dft_c2r_2d(ny,nx,out,in,FFTW_MEASURE)
 
       ! Compute FT of source field g
       do r = 1,nz
